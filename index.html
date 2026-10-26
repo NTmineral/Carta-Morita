@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para mi morita 💗</title>
+<style>
+:root{--wine:#8d263e;--rose:#e9aab9;--pale:#fff3f4;--ink:#6c2639;--gold:#d9b87c}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--ink);font-family:Georgia,'Times New Roman',serif;background:radial-gradient(circle at 20% 10%,#f8dce2 0,transparent 30%),linear-gradient(135deg,#f7cfd9,#f4e0e3 45%,#e7aebc);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;background-image:radial-gradient(#8d263e .7px,transparent .7px);background-size:8px 8px}
+.wrap{width:min(720px,94vw);margin:0 auto;padding:24px 0 40px;position:relative}
+.page{display:none;min-height:calc(100vh - 64px);animation:appear .7s ease both}
+.page.active{display:flex;flex-direction:column;align-items:center;justify-content:center}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.frame{position:relative;width:100%;padding:30px 22px 26px;border:1px solid #e8c8a0;outline:1px solid rgba(255,255,255,.65);outline-offset:-8px;border-radius:8px;background:linear-gradient(145deg,#9c2e47,#812039 70%,#9d3049);box-shadow:0 18px 45px #6722373b;color:#fff4ed;text-align:center;overflow:hidden}
+.frame:before,.frame:after{content:"❧  ✧  ❧";position:absolute;left:8px;right:8px;color:#f8dce0;font-size:19px;letter-spacing:7px;opacity:.9}
+.frame:before{top:8px}.frame:after{bottom:8px}
+.script{font-family:'Brush Script MT','Segoe Script',cursive;font-style:italic;font-weight:400}
+h1{font-size:clamp(48px,10vw,78px);line-height:.9;margin:28px 0 8px;text-shadow:0 2px 0 #6c172e}
+.sub{font-size:18px;margin:12px 0 20px;color:#ffe9e8}
+.lockets{display:flex;justify-content:center;gap:0;margin:12px auto 22px}
+.locket{width:76px;height:68px;background:#fff3e5;border:3px solid #d8b77b;color:#a77e54;display:grid;place-items:center;font-size:30px;transform:rotate(-8deg);border-radius:48% 48% 48% 12%;box-shadow:0 3px 0 #6f1c31}
+.locket+ .locket{transform:rotate(8deg);margin-left:-7px;border-radius:48% 48% 12% 48%}
+.envelope{background:#fffaf0;color:#733248;width:min(440px,100%);min-height:230px;margin:10px auto 20px;position:relative;padding:25px 18px 20px;box-shadow:0 10px 20px #4c11264f;clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
+.envelope:before{content:"";position:absolute;top:0;left:0;right:0;height:52%;background:linear-gradient(145deg,#f9f2e6,#fffaf1);clip-path:polygon(0 0,100% 0,50% 100%);opacity:.8}
+.envelope>*{position:relative}
+.smallcaps{font-size:12px;letter-spacing:1px;color:#a45b6c;margin:4px}
+.name{font-size:27px;margin:2px 0 20px}
+.lotus{font-size:54px;filter:drop-shadow(0 2px 1px #c8899a);line-height:1.2}
+.hint{font-size:16px;font-style:italic;margin:4px 0 10px;color:#ffe5e7}
+.paper{width:min(520px,100%);background:#fff8ed;color:#45353a;padding:28px clamp(18px,5vw,38px);position:relative;box-shadow:0 12px 30px #631d3138;border:1px solid #e7d5c1;transform:rotate(-.4deg)}
+.paper:before{content:"";position:absolute;inset:8px;border:1px dashed #d9b7b4;pointer-events:none}
+.paper h2{position:relative;font-size:27px;font-weight:normal;margin:0 0 16px;text-align:center;color:#9b4058}
+.paper p{position:relative;font-family:'Trebuchet MS',Arial,sans-serif;font-size:clamp(15px,3vw,18px);line-height:1.75;margin:0;white-space:pre-line}
+.flower-corner{position:absolute;font-size:28px;opacity:.85}
+.flower-corner.a{top:12px;left:14px}.flower-corner.b{right:14px;bottom:12px}
+.nav{display:flex;justify-content:center;align-items:center;gap:14px;margin-top:22px}
+button{font:inherit;border:1px solid #f4d5d9;background:#fff3f4;color:#8a2b44;border-radius:28px;padding:12px 22px;cursor:pointer;box-shadow:0 5px 14px #621b2d25;transition:transform .2s,background .2s}
+button:hover{transform:translateY(-2px);background:#fff}
+button:focus-visible{outline:3px solid #c35c78;outline-offset:3px}
+.back{background:transparent;color:#fff;border-color:#ffffff9c}
+.counter{color:#fff0f1;font-size:13px;min-width:48px}
+.note{background:#fff8ed;color:#553641;width:min(510px,100%);padding:30px 26px;border-radius:3px;box-shadow:0 12px 30px #631d3138;position:relative;font-family:'Trebuchet MS',Arial,sans-serif;font-size:clamp(17px,3.4vw,21px);line-height:1.8;text-align:center;border-top:7px solid #e8c8a0}
+.note:after{content:"";position:absolute;inset:9px;border:1px dashed #d8b6b5;pointer-events:none}
+.note .sticker{font-size:38px;display:block;margin-bottom:12px}
+.calendar{background:#a8d1e4;color:#fff;width:min(410px,100%);padding:22px;border-radius:8px;box-shadow:0 12px 28px #5c18343b;border:7px solid #fff0e5}
+.calendar h2{font-family:'Brush Script MT','Segoe Script',cursive;font-size:54px;font-weight:normal;margin:0 0 12px}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;font-family:Arial,sans-serif}
+.days span{display:grid;place-items:center;aspect-ratio:1;font-size:14px;border-radius:50%}
+.days .weekday{font-size:11px;color:#fff5d7}
+.days .selected{background:#a52e4b;color:#fff;font-weight:bold;box-shadow:0 0 0 3px #f7d9df}
+.photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;width:100%;margin:18px 0}
+.photo{background:#fffaf3;padding:9px 9px 30px;box-shadow:0 8px 20px #55162c35;transform:rotate(-3deg);position:relative}
+.photo:nth-child(2){transform:rotate(3deg);margin-top:18px}
+.photo img{display:block;width:100%;height:clamp(210px,45vw,360px);object-fit:cover;object-position:center;border:1px solid #e8d9ce}
+.photo:after{content:"♡";position:absolute;bottom:3px;left:0;right:0;text-align:center;color:#a64b63;font-size:23px}
+.music-bar{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;margin:14px auto 4px;color:#ffe9ec;font:14px Arial,sans-serif}.music-bar button{padding:9px 16px}.music-status{font-size:12px;opacity:.9}
+.final-title{font-size:clamp(34px,7vw,54px);margin:6px 0 12px}
+.final-copy{font-size:20px;font-style:italic;line-height:1.5;margin:0 0 12px}
+@media(max-width:480px){.wrap{padding-top:12px}.frame{padding:25px 14px}.paper{padding:25px 18px}.photos{gap:9px}.photo{padding:6px 6px 24px}.photo img{height:250px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <section class="page active" id="page1" aria-label="Portada">
+    <div class="frame">
+      <div class="sub">✧ una cartita hecha con cariño ✧</div>
+      <h1 class="script">Feliz<br>Cumpleaños</h1>
+      <div class="lockets"><div class="locket">F</div><div class="locket">D</div></div>
+      <p class="sub">25 de Octubre</p>
+      <div class="envelope">
+        <p class="smallcaps">PARA MI MORITA:</p>
+        <p class="name script">Flor</p>
+        <div class="lotus" aria-label="Flor de loto">🪷</div>
+        <p class="smallcaps">CON CARIÑO:</p>
+        <p class="name script">Antu</p>
+      </div>
+      <p class="hint">Haz clic sobre la carta<br>para leerla.</p>
+      <div class="nav"><button onclick="openLetter()">Abrir mi carta 💌</button></div>
+      <div class="music-bar"><button id="musicToggle" onclick="toggleMusic()">▶ Reproducir música</button><span id="musicStatus" class="music-status">Wanna Be Yours · Arctic Monkeys</span></div>
+    </div>
+  </section>
+
+  <section class="page" id="page2" aria-label="Carta de cumpleaños">
+    <div class="frame">
+      <div class="paper">
+        <span class="flower-corner a">🪷</span><span class="flower-corner b">🌸</span>
+        <h2 class="script">Mi morita,</h2>
+        <p>Hoy celebro el nacimiento de una niña tan linda y enojona, gracias por estar en mi vida y poder compartir con usted más lindos y malos recuerdos. Quiero que este día, que es su día, lo pases bien porque te lo mereces, eres la chica más fuerte que conozco y estoy muy orgulloso de usted porque siempre te esfuerzas en lo que te propones.</p>
+      </div>
+      <p class="hint">Sigue leyendo, mi morita 🌷</p>
+      <div class="nav"><button class="back" onclick="go(1)">← Atrás</button><span class="counter">1 / 4</span><button onclick="go(3)">Siguiente ↓</button></div>
+    </div>
+  </section>
+
+  <section class="page" id="page3" aria-label="Primer mensaje">
+    <div class="frame">
+      <div class="note"><span class="sticker">🌸 🪷 🌸</span>Eres una persona muy brillante e increíble, y sigue así muchos años más. Siempre vas a ser el mejor regalo que Santa me dio 🤗</div>
+      <p class="hint">Una flor para una persona especial 🌷</p>
+      <div class="nav"><button class="back" onclick="go(2)">← Atrás</button><span class="counter">2 / 4</span><button onclick="go(4)">Siguiente ↓</button></div>
+    </div>
+  </section>
+
+  <section class="page" id="page4" aria-label="Segundo mensaje">
+    <div class="frame">
+      <div class="note"><span class="sticker">🪷 💗 🪷</span>Siempre voy a estar para usted, mi niña. Siempre que estés mal, cuenta conmigo porque nunca dejaría sola a mi morita. Siempre vas a tener a alguien con quien desahogarte y que te apoye. 💕</div>
+      <p class="hint">Siempre mereces cariño y apoyo 🌼</p>
+      <div class="nav"><button class="back" onclick="go(3)">← Atrás</button><span class="counter">3 / 4</span><button onclick="go(5)">Siguiente ↓</button></div>
+    </div>
+  </section>
+
+  <section class="page" id="page5" aria-label="Calendario y fotos">
+    <div class="frame">
+      <h2 class="script final-title">Te quiero</h2>
+      <p class="final-copy">Yo me voy a encargar de que siempre estés feliz. 💗</p>
+      <div class="calendar">
+        <h2>Octubre</h2>
+        <div class="days" aria-label="Calendario de octubre">
+          <span class="weekday">L</span><span class="weekday">M</span><span class="weekday">M</span><span class="weekday">J</span><span class="weekday">V</span><span class="weekday">S</span><span class="weekday">D</span>
+          <span></span><span></span><span></span><span>1</span><span>2</span><span>3</span><span>4</span>
+          <span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span>
+          <span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span>
+          <span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span class="selected">25</span>
+          <span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span><span></span>
+        </div>
+      </div>
+      <div class="photos">
+        <div class="photo"><img src="assets/foto-1.png" alt="Foto especial juntos"></div>
+        <div class="photo"><img src="assets/foto-2.png" alt="Un recuerdo especial juntos"></div>
+      </div>
+      <p class="hint">Cada recuerdo contigo es una flor que guardo en el corazón. 🌷</p>
+      <div class="nav"><button class="back" onclick="go(4)">← Atrás</button><span class="counter">4 / 4</span><button onclick="go(1)">Volver al principio ↺</button></div>
+    </div>
+  </section>
+</main>
+<script>
+const music = new Audio("assets/wanna-be-yours.mp3");
+music.loop = true;
+music.volume = 0.45;
+let musicStarted = false;
+async function startMusic(){
+  try { await music.play(); musicStarted = true; document.getElementById("musicToggle").textContent = "❚❚ Pausar música"; document.getElementById("musicStatus").textContent = "Sonando: Wanna Be Yours · Arctic Monkeys"; }
+  catch(e) { document.getElementById("musicStatus").textContent = "Añade assets/wanna-be-yours.mp3 para escuchar la canción."; }
+}
+function openLetter(){ go(2); if(!musicStarted) startMusic(); }
+async function toggleMusic(){
+  if(music.paused) { await startMusic(); }
+  else { music.pause(); document.getElementById("musicToggle").textContent = "▶ Reanudar música"; document.getElementById("musicStatus").textContent = "Música pausada"; }
+}
+function go(n){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const next=document.getElementById('page'+n);
+  if(next){next.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
+}
+document.addEventListener('keydown',e=>{
+  const active=[...document.querySelectorAll('.page')].findIndex(p=>p.classList.contains('active'))+1;
+  if(e.key==='ArrowRight'&&active<5)go(active+1);
+  if(e.key==='ArrowLeft'&&active>1)go(active-1);
+});
+</script>
+</body>
+</html>
